@@ -11,8 +11,6 @@ namespace LasDb
         public double Y { get; set; }
         public double Z { get; set; }
         public ushort Intensity { get; set; }
-        public double X2D { get; set; }
-        public double Y2D { get; set; }
         public int ScanLineIndex { get; set; }
     }
 
@@ -20,7 +18,7 @@ namespace LasDb
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite($"Data Source=D:\\desktop\\test\\架站\\天轻右\\las\\未抽稀.db;");
+            optionsBuilder.UseSqlite($"Data Source=D:\\desktop\\a.db;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

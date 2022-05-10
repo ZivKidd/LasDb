@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using EFCore.BulkExtensions;
 using LasDb;
+using LasSharp;
 using Microsoft.EntityFrameworkCore;
 
 static async void Las2Db(string lasFilePath)
@@ -25,8 +26,6 @@ static async void Las2Db(string lasFilePath)
                 Y = lasPoint.Y,
                 Z = lasPoint.Z,
                 ScanLineIndex = random.Next(pointNum),
-                X2D = lasPoint.X2D,
-                Y2D = lasPoint.Y2D
             };
             index++;
             if (index % pointNum == 0)
@@ -47,6 +46,6 @@ static async void Las2Db(string lasFilePath)
         LasPointDb[] b = dataContext.LasPointDbs.Where(x => x.Intensity == 4644).AsNoTracking().ToArray();
     }
 }
-Las2Db(@"D:\desktop\test\架站\天轻右\las\未抽稀.las");
+Las2Db(@"D:\desktop\a.las");
 
 

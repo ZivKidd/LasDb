@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="EFCore.BulkExtensions" Version="6.4.4" />
+    <PackageReference Include="LasSharp" Version="1.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.4">
       <PrivateAssets>all</PrivateAssets>
